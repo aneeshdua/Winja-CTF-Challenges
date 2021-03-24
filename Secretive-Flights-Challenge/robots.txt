@@ -1,0 +1,3 @@
+User-agent: 
+Disallow: /usernames.txt
+Disallow: /passwords.txt

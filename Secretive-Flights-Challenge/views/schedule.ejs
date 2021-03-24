@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    
+  <title>Flights Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    body{
+        background:#e7f2f3;
+    }
+    th { 
+    padding: 10px;
+    }
+    td { 
+    padding: 10px;
+    }
+    #header{
+            width:100%;
+            height:90px;
+            z-index:2500;
+            padding-left:120px;
+            position:fixed;
+            top:0;
+            left:0;
+            background:rgba(0, 0, 0, 0.8);
+            color: #e7f2f3;
+        }
+    #logo{
+        position:absolute;
+        height:70px;
+        left:25px;
+        top:10px;
+        cursor:pointer;
+    }
+    .row, #header{
+            min-width: 440px;
+        }
+
+    .header-phones{
+        font-size:14px;
+        color: #e7f2f3;
+        margin-right: 13.5%;
+    }
+    .header-item{
+        margin-right:13.5%;
+        color:#e7f2f3;
+        font-size:18px;
+        background: Transparent no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        outline:none;
+        border-radius:6px;
+    }
+    .header-item:hover{
+        transition: background-color 0.3s;
+        background-color:rgba(200, 200, 200, 0.2);
+    }
+    .table-data{
+        margin-top:100px;
+        width:80%; 
+    margin-left:15%; 
+    margin-right:15%;
+    }
+</style>
+
+
+  <div id="header">
+    <img src="images/Logo2.png" id="logo">
+    <span class="header-phones">
+        <span style="font-size: 24px;font-weight: 500;">UA ABS</span>
+        <br>
+        <span>(000) 123-45-67</span>
+        <br>
+        <span>(000) 987-65-43</span>
+    </span>
+    <a href="/">
+        <button id="mainPage" class="header-item">Home</button>
+    </a>
+    <a href="/admin">
+        <button id="contactPage" class="header-item">Admin</button>
+    </a>
+</div>
+
+</head>
+<body>
+    <div class="table-data">
+<h2>Night City Flight Schedule</h2>
+    
+    <table border="1">
+        <tr>
+            <th>Flight Number</th>
+            <th>Flight Name</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Time</th>
+            <th>Creds(For Admin Eyes only)</th>
+        </tr>
+        
+        <tr>
+            <td>NC100</td>
+            <td>Arb A380</td>
+            <td>France</td>
+            <td>London</td>
+            <td>10:00</td>
+            <% if(data=="loggedin"){ %>
+                <td colspan="7">ZXZnbWcgbmFhY2d2YyByd2R1YXYgYm1ub2UgeWFmIHVldWthY3ZvdWN0cWUg</td>
+            <% } else{} %>
+        </tr>
+        
+        <tr>
+            <td>NC101</td>
+            <td>Arb A480</td>
+            <td>France</td>
+            <td>Base</td>
+            <td>13:00</td>
+            <% if(data=="loggedin"){ %>
+                <td colspan="7">YXl3YSBpZWN3b3BpcHkgYW5ha21zIGVqeSBrcWZuZ2Ugb2FtdmNzYmtjIHVx</td>
+            <% } else{} %>
+        </tr>
+
+        <tr>
+            <td>NC102</td>
+            <td>Arb A380</td>
+            <td>France</td>
+            <td>India</td>
+            <td>15:00</td>
+            <% if(data=="loggedin"){ %>
+                <td colspan="7">dHd0Y2dlbG0gd25xZHJ3eSBlZmtzYmduYmthdCBybGl1dHFlIGVmdnJpIHBp</td>
+            <% } else{} %>
+        </tr>
+
+        <tr>
+            <td>NC103</td>
+            <td>Arb A380</td>
+            <td>France</td>
+            <td>UAE</td>
+            <td>17:00</td>
+            <% if(data=="loggedin"){ %>
+                <td colspan="7">b2p0dGEgY3d5IGZjYmd7amZjaWZ0endlX3dtaXhpdGpfem9sX0BzM19jaXpwazBfbkBzazNzfQ==</td>
+            <% } else{} %>
+        </tr>
+
+    </table>
+    </div>
+</body>
+</html>

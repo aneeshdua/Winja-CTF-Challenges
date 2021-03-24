@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<style>
+		.login-form {
+			width: 300px;
+			margin: 0 auto;
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+		}
+		.login-form h2 {
+			text-align: center;
+			color:#0B59EC;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="login-form">
+
+			<h1>Login Form</h1>
+			<% if(round==1){ %>
+				<h2>Portal 1</h2>
+			<% } else if(round==2) { %>
+				<h2>Portal 2</h2>
+			<% } else if(round==3) { %>
+				<h2>Portal 3</h2>
+			<% } else if(round==4) { %>
+				<h2>Portal 4</h2>
+			<% } else if(round==5) { %>
+				<h2>Portal 5</h2>
+			<% } else { %>
+				
+			<% } %>
+			
+			<div class="Round_Hint">
+				<% if(round==1){ %>
+					<p>Here goes the first intern's submission.</p>
+				<% } else if(round==2) { %>
+					<p>Never expected the first one to be secure. This intern's work seems secret-ive. I guess he has his secrets on our database resources.</p>
+				<% } else if(round==3) { %>
+					<p>Okay previous one was a bummer! Enough amateurs! Even this girl seems secretive. However, she said all the SQL commands will be blanked in the inputs!</p>
+				<% } else if(round==4) { %>
+					<p>Okay here is another one. I don't know why are all these interns so secretive. This guy claims all the SQL commands will not be processed at all. He says he has considered both CASES.</p>
+				<% } else if(round==5) { %>
+					<p>Wow! I guess I should hire non-secretive interns. Still lets give the last one a try. She doesn't really like spaces tbh.</p>
+				<% } else if(round==6) { %>
+					<p> Okay fine I guess some things you gotta do yourself! Here is your flag</p>
+					<h2>flag{nc-bug-bounty_t00k_y0u_l0ng_3n0ugh}
+				<% } %>
+			</div>
+
+			<div class="response">
+				<% if (data == 0){ %>
+				<p class="incorrect" style="color:red;font-weight: bold;">Incorrect Username or Password</p>
+				<% } else if(data==1) { %>
+				<p class="correct" style="color: green; font-weight: bold;">Congrats on clearing this round!</p>
+				<% } %>
+			</div>
+
+
+			<form action="/login/auth" method="POST">
+				<input type="text" name="username" placeholder="Username" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+</html>

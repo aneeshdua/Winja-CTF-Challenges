@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background:#e7f2f3;
+            margin-left: 10pt;
+        }
+        th { 
+        padding: 10px;
+        }
+        td { 
+        padding: 10px;
+        }
+        #header{
+                width:100%;
+                height:90px;
+                z-index:2500;
+                padding-left:120px;
+                position:fixed;
+                top:0;
+                left:0;
+                background:rgba(0, 0, 0, 0.8);
+                color: #e7f2f3;
+            }
+        #logo{
+            position:absolute;
+            height:70px;
+            left:25px;
+            top:10px;
+            cursor:pointer;
+        }
+        .row, #header{
+                min-width: 440px;
+            }
+
+        .header-phones{
+            font-size:14px;
+            color: #e7f2f3;
+            margin-right: 13.5%;
+        }
+        .header-item{
+            margin-right:13.5%;
+            color:#e7f2f3;
+            font-size:18px;
+            background: Transparent no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+            border-radius:6px;
+        }
+        .header-item:hover{
+            transition: background-color 0.3s;
+            background-color:rgba(200, 200, 200, 0.2);
+        }
+        .bounty_header{
+            margin-top: 80pt;
+            text-align: center;
+            font-size: 40pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style:oblique;
+            font-weight: bold;
+        }
+        .policy{
+            font-size: 30pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            
+        }
+        .problem{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20pt;
+        }
+        .challenge{
+            width: 150px;
+            height:50px;
+            border-radius:3000px;
+            position:relative;
+            left:calc(50% - 75px);
+            top:calc(50% - 25px);
+            background: black;
+            cursor:pointer;
+            line-height:12px;
+            opacity:1;
+            color: white;
+            font-weight: bolder;  
+            font-family: Lato, "Trebuchet MS", "Verdana", "sans-serif";
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>Night City Travels</title>
+    <div id="header">
+        <img src="/Logo.gif" id="logo">
+        <span class="header-phones">
+            <span style="font-size: 24px;font-weight: 500;">NC Airlines</span>
+            <br>
+            <span>(000) 123-45-67</span>
+            <br>
+            <span>(000) 987-65-43</span>
+        </span>
+    </div>
+</head>
+<body>
+    <div id="context"></div>
+        <h1 class="bounty_header">Night City Airlines Bug Bounty Program</h1>
+        
+        <h2 class="policy">Policy:</h2>
+            <p class="problem"> The NC Airlines Website does not have a secure login system. So we hired interns to make a secure login portal. Can you help us find out if its secure?</p>
+        
+        <h2 class="policy">In Scope Domain:</h2>
+            <p class="problem">For security purposes, the in scope instance resets every 15 minutes,so make note of your progress.</p>    
+            <a href="/login">
+                <button id="contactPage" class="challenge">LOGIN PORTAL</button>
+            </a>
+        <h2 class="policy">Reward:</h2>
+            <p class="problem">A very important flag!</p>
+    </div>
+    
+    
+    </body>
+    </html>    

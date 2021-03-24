@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+    nc-bug-bounty-db:
+        image: mariadb
+        restart: on-failure
+        environment:
+            MYSQL_ROOT_PASSWORD: fJR3AvgmVyQtrTXp
+            MYSQL_DATABASE: sqli_challenge
+        volumes:
+          - ./db_schema:/docker-entrypoint-initdb.d
+        healthcheck:
+            test: "exit 0"
+    nc-bug-bounty-web:
+        build: .
+        environment:
+            - DATABASE_HOST=nc-bug-bounty-db
+        depends_on:
+            nc-bug-bounty-db:
+                condition: service_healthy
+        restart: always
+        ports:
+            - 10338:3000
